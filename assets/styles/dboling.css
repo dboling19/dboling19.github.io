@@ -1,6 +1,6 @@
-@import "./../../node_modules/nord/src/sass/nord.scss";
+@import "./../../node_modules/nord/src/nord.css";
 
-@page { 
+@page {
   margin: 0.79in;
 }
 
@@ -16,7 +16,7 @@ p {
 
 body {
   background-color:white;
-  color:$nord0;
+  color:var(--nord0);
   font-family:Arial,sans-serif;
   font-size:18px;
   overflow-x:hidden;
@@ -65,7 +65,7 @@ tr:hover {
 }
 
 tr:nth-child(odd) {
-  background-color: $nord5;
+  background-color: var(--nord5);
 }
 
 tr:nth-child(even) {
@@ -108,7 +108,7 @@ a.db-bar-item, a.db-button {
 
 .db-input {
   padding:1px;
-  border:1px solid $nord4;
+  border:1px solid var(--nord4);
   width:100%;
   display:block;
 }
@@ -127,18 +127,18 @@ a.db-bar-item, a.db-button {
 }
 
 .db-button, a.db-button {
-  background-color:$nord5;
+  background-color:var(--nord5);
   padding:6px;
   border:1px solid #ccc;
-  color:$nord1;
+  color:var(--nord1);
   text-align:center;
   width:auto;
   cursor:pointer;
 }
 
 #navbar .db-button-route {
-  background-color:$nord4;
-  color:$nord1;
+  background-color:var(--nord4);
+  color:var(--nord1);
 }
 
 .db-button:hover {
@@ -187,7 +187,7 @@ a.db-bar-item, a.db-button {
   text-align:center;
   width:60%;
   margin:40px auto;
-  color:$nord13;
+  color:var(--nord13);
 }
 
 .db-color-block.top{
@@ -259,13 +259,13 @@ db-container, .db-panel {
 }
 
 .db-list:nth-child(even) {
-  background-color:$nord5;
-  color:$nord0;
+  background-color:var(--nord5);
+  color:var(--nord0);
 }
 
 .db-list:nth-child(odd) {
-  background-color:$nord4;
-  color:$nord0;
+  background-color:var(--nord4);
+  color:var(--nord0);
 }
 
 .db-margin-top {
@@ -350,13 +350,13 @@ db-container, .db-panel {
   left:0;
   display:none;
   z-index:2;
-  background-color:$nord1;
+  background-color:var(--nord1);
   opacity:0.4;
 }
 
 .db-error {
-  background-color:$nord11;
-  color:$nord6;
+  background-color:var(--nord11);
+  color:var(--nord6);
   padding:10px 8px;
   width:fit-content;
 }
@@ -389,20 +389,20 @@ db-container, .db-panel {
 
 
 
-// start dark mode
+/* start dark mode */
 .db-dark-mode {
-  background-color: $nord0;
-  color: $nord6;
+  background-color: var(--nord0);
+  color: var(--nord6);
 }
 
 .db-dark-mode .db-button {
-  background-color: $nord3;
-  color: $nord6;
+  background-color: var(--nord3);
+  color: var(--nord6);
 }
 
 .db-dark-mode .db-button:hover {
-  background-color: $nord2!important;
-  color: $nord6!important;
+  background-color: var(--nord2)!important;
+  color: var(--nord6)!important;
 }
 
 .db-dark-mode .db-button:disabled {
@@ -416,44 +416,44 @@ db-container, .db-panel {
 }
 
 .db-dark-mode #navbar {
-  background-color: $nord1;
-  color: $nord4;
+  background-color: var(--nord1);
+  color: var(--nord4);
 }
 
 .db-dark-mode #navbar .db-button-route {
-  background-color: $nord4;
-  color: $nord1;
+  background-color: var(--nord4);
+  color: var(--nord1);
 }
 
 .db-dark-mode th {
-  border-bottom: 1px solid $nord4;
+  border-bottom: 1px solid var(--nord4);
 }
 
 .db-dark-mode tr:hover {
-  background-color: $nord3!important;
+  background-color: var(--nord3)!important;
 }
 
 .db-dark-mode tr:nth-child(even) {
-  background-color: $nord1;
+  background-color: var(--nord1);
 }
 
 .db-dark-mode tr:nth-child(odd) {
-  background-color: $nord2;
+  background-color: var(--nord2);
 }
 
 .db-dark-mode input {
-  background-color: $nord2;
-  color: $nord6;
+  background-color: var(--nord2);
+  color: var(--nord6);
 }
 
 .db-dark-mode .db-form-popup {
-  background-color: $nord0;
-  color: $nord6;
+  background-color: var(--nord0);
+  color: var(--nord6);
 }
 
 .db-dark-mode .db-info {
-  background-color: $nord1;
-  color: $nord6;
+  background-color: var(--nord1);
+  color: var(--nord6);
 }
 
 .db-dark-mode .db-error-message {
