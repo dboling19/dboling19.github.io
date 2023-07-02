@@ -1,8 +1,10 @@
-@import "./../../node_modules/nord/src/nord.css";
+/* @import "./../../node_modules/nord/src/nord.css"; */
 
+/*
 @page {
   margin: 0.79in;
 }
+*/
 
 html {
   scroll-behavior:smooth;
