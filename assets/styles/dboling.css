@@ -162,6 +162,24 @@ a.db-bar-item, a.db-button {
   color:var(--nord6);
 }
 
+.db-top-btn {
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:30px;
+  z-index:99;
+  border:none;
+  outline:none;
+  background-color:#4c566a;
+  color:#eceff4;
+  padding:18px 15px;
+  border-radius:50%;
+}
+
+.db-top-btn:hover {
+  background-color:#3b4252;
+}
+
 .db-border {
   border:1px solid lightgrey;
   overflow:hidden;
@@ -186,7 +204,7 @@ a.db-bar-item, a.db-button {
 .db-poptext {
   font-size:30px;
   text-align:center;
-  color:#88c0d0;
+  color:var(--nord10);
   margin-bottom:30px;
   margin-top:30px;
   width:60%;
@@ -204,7 +222,15 @@ a.db-bar-item, a.db-button {
   text-align:center;
   width:60%;
   margin:40px auto;
-  color:var(--nord13);
+  color:#ffea96;
+}
+
+.db-codeblock {
+  background-color:var(--nord7);
+  width:fit-content;
+  height:fit-content;
+  padding:20px;
+  border-radius:5px;
 }
 
 .db-color-block.top{
