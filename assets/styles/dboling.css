@@ -1,10 +1,10 @@
-/* @import "./../../node_modules/nord/src/nord.css"; */
+@charset "UTF-8";
 
-/*
+@import "./nord.css";
+
 @page {
   margin: 0.79in;
 }
-*/
 
 html {
   scroll-behavior:smooth;
@@ -128,10 +128,24 @@ a.db-bar-item, a.db-button {
   display:none;
 }
 
+.db-sidebar {
+  background-color: var(--nord6);
+  width:auto;
+  height:100%;
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+}
+
+.db-nav {
+  display:block;
+  font-size:16px;
+}
+
 .db-button, a.db-button {
-  background-color:var(--nord5);
-  padding:6px;
-  border:1px solid #ccc;
+  background-color:var(--nord6);
+  padding:6px 10px;
   color:var(--nord1);
   text-align:center;
   width:auto;
@@ -139,12 +153,13 @@ a.db-bar-item, a.db-button {
 }
 
 #navbar .db-button-route {
-  background-color:var(--nord4);
+  background-color:var(--nord5);
   color:var(--nord1);
 }
 
 .db-button:hover {
-  background-color:lightgrey!important;
+  background-color:var(--nord3)!important;
+  color:var(--nord6);
 }
 
 .db-border {
@@ -159,7 +174,7 @@ a.db-bar-item, a.db-button {
 .db-title {
   font-size:38px;
   margin-top:50px;
-  color:white;
+  color:var(--nord0);
 }
 
 .db-body {
@@ -196,9 +211,9 @@ a.db-bar-item, a.db-button {
   transform:translate(-17%,0);
   position:absolute;
   padding:6px;
-  width:90%;
-  height:36px;
-  background-image:linear-gradient(to right, #2e3440 0%, #81a1c1 50%, #2e3440 100%);
+  width:80%;
+  height:50px;
+  background-image:linear-gradient(to right, white 0%, #81a1c1 50%, white 100%);
   z-index:-1;
 }
 
@@ -206,7 +221,7 @@ a.db-bar-item, a.db-button {
   padding:6px;
   width:150%;
   height:fit-content;
-  background-image:linear-gradient(to left, #81a1c1, #2e3440);
+  background-image:linear-gradient(to left, #81a1c1, white);
 }
 
 .db-padding-small {
