@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="HTML, CSS, JavaScript" charset="UTF-8">
+		<title>Boling IT Consulting</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
+	</head>
+	<body lang="en-US"><p style="line-height:100%;margin-bottom:0in;">
+		<div class="db-sidebar">
+      <img style="height:auto;width:50%;margin:5% 25%;" src="assets/images/logo_asl.png" alt="Boling IT Solutions Logo"/>
+			<a class="db-button db-nav" href="home.html">Home</a>
+			<a class="db-button db-nav" href="products.html">Projects</a>
+			<span style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 7/4/2023</i></span>
+		</div>
+		<div class="db-half db-center">
+			<svg class="db-color-block db-top"></svg>
+			<span class="db-header"><b>Boling IT Consulting</b></span>
+    </div>
+    <div style="width:100%;height:50px;background-color:var(--nord3);"></div>
+    <div class="db-half db-center">
+			<p class="db-title db-color-block" id="our_why"><i>ERP Systems</i></p>
+			<p class="db-body db-text-center">Developed for and alongside <span style="color:#81a1c1"><b>Goshen City's clerk/treasurer</b></span>, this system manages cemetery plots, owners, and burials.</p>
+      <p class="db-body">This is the beginning of a larger ERP system that manages city resources and assets.  Currently, the system provides an efficient alternative to spreadsheets and handwritten notes, allowing the entry, management, and retreival of cemetery data.</p>
+      <img style="height:auto;width:100%;margin:auto" src="assets/images/cemetery_1.png" alt="Cemetery System Preview"/>
+			<svg class="db-separator"></svg>
+
+      <p class="db-body db-text-center">Developed for <span style="color:#81a1c1"><b>a food pantry</b></span>, this system improves the management of food items stored in the organization's pantries.  At a glance, users can determine quantities or items, and manipulate data within the system with restrictions and organization preventing human error.</p>
+      <p class="db-body">This is an in-progress system with planned additions to include barcode scanning and generating reports for item retrieval lists.  Currently, the system provides an efficient alternative to spreadsheets and handwritten notes, allowing the entry, management, and retreival of cemetery data.</p>
+      <img style="height:auto;width:100%;margin:auto" src="assets/images/inventory_1.png" alt="Inventory System Preview 1"/>
+			<svg class="db-separator"></svg>
+		</div>
+		<button onclick="to_top()" id="to_top_btn" class="db-top-btn"><b>Top</b></button>
+	</body>
+	
+	<script>
+		let to_top_btn = document.getElementById('to_top_btn');
+		window.onscroll = function() {scroll_function()};
+		function scroll_function()
+		{
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+			{
+				to_top_btn.style.display = 'block';	
+			} else {
+				to_top_btn.style.display = 'none';	
+			}
+		}
+		
+		function to_top()
+		{
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For others
+		}
+
+    // calculates curve of top separator
+    addEventListener('resize', (event) => {
+      // d="m 0 25 C 333 -45, 666 95, 1300 25"
+      const svg = document.getElementById('top_separator');
+      const path = document.getElementById('top_separator_path');
+      const svg_width = svg.clientWidth;
+      const svg_height = svg.clientHeight;
+      first_curve =  (Math.round(svg_width / 3)).toString() + " " + (Math.round((svg_height - 5) * -1)).toString();
+      second_curve = (Math.round((svg_width / 3) * 2)).toString() + " " + (Math.round(svg_height + (svg_height - 5))).toString();
+      section_end = svg_width.toString() + " 25";
+      d_value = "m 0 25 C " + first_curve + ", " + second_curve + ", " + section_end;
+      path.setAttribute('d', d_value);
+    });
+			
+	</script>
+</html>

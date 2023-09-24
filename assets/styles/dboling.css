@@ -233,7 +233,7 @@ a.db-bar-item, a.db-button {
   border-radius:5px;
 }
 
-.db-color-block.top{
+.db-color-block.db-top{
   transform:translate(-17%,0);
   position:absolute;
   padding:6px;
@@ -250,13 +250,22 @@ a.db-bar-item, a.db-button {
   background-image:linear-gradient(to left, #81a1c1, white);
 }
 
+.db-separator {
+  display:block;
+  width:50%;
+  margin:auto;
+  margin-top:100px;
+  height:10px;
+  background-color:var(--nord6);
+  box-shadow:2px 1px 5px var(--nord3);
+}
+
 .db-padding-small {
   padding:5px !important;
 }
 
 .db-half {
-  width:49%;
-  float:left;
+  width:49.9999%;
 }
 
 .db-third {
@@ -364,7 +373,6 @@ db-container, .db-panel {
 
 .db-center {
   margin:auto;
-  width:50%;
 }
 
 .db-center-content {
@@ -500,11 +508,11 @@ db-container, .db-panel {
 }
 
 .db-dark-mode .db-error-message {
-  background-color:#434c5e;
+  background-color:var(--nord2);
 }
 
 .db-dark-mode .db-error-message.db-top-arrow:after {
-  border-bottom:15px solid #434c5e;
+  border-bottom:15px solid var(--nord2);
 }
 
 span .db-dark-mode .db-tag-label {
@@ -512,9 +520,26 @@ span .db-dark-mode .db-tag-label {
 }
 
 .db-dark-mode .db-tag-remove-btn {
-  background-color:#b4a4cc;
+  background-color:var(--nord9);
 }
 
 .db-dark-mode .db-tag-remove-btn:hover {
-  background-color:#e1cdff;
+  background-color:var(--nord6);
+}
+
+.db-dark-mode.db-color-block.db-top{
+  transform:translate(-17%,0);
+  position:absolute;
+  padding:6px;
+  width:80%;
+  height:50px;
+  background-image:linear-gradient(to right, white 0%, var(--nord0) 50%, white 100%);
+  z-index:-1;
+}
+
+.db-dark-mode .db-color-block {
+  padding:6px;
+  width:150%;
+  height:fit-content;
+  background-image:linear-gradient(to left, var(--nord0), white);
 }
