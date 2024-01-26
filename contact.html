@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="HTML, CSS, JavaScript" charset="UTF-8">
+		<title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
+	</head>
+	<body lang="en-US"><p style="line-height:100%;margin-bottom:0in;">
+		<div class="db-sidebar">
+      <img style="height:auto;width:50px;margin:5px 50px;" src="assets/images/boling_logo.png" alt="Boling IT Solutions Logo"/>
+			<a class="db-button db-nav" href="home.html">Home</a>
+			<a class="db-button db-nav" href="projects.html">Projects</a>
+      <a class="db-button db-nav" href="about.html">About Me</a>
+      <a class="db-button db-nav" href="contact.html">Contact</a>
+			<span style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
+		</div>
+		<div class="db-half db-center">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6w1vkYLbx0vfaMHCNyWR_5xMCULFFnMcHx7aA1IyzF8lR6A/viewform?embedded=true" style="width:100%;height:1000px;border:none;">Loading…</iframe>
+			
+		</div>
+		<button onclick="to_top()" id="to_top_btn" class="db-top-btn"><b>Top</b></button>
+	</body>
+	
+	<script>
+		let to_top_btn = document.getElementById('to_top_btn');
+		window.onscroll = function() {scroll_function()};
+		function scroll_function()
+		{
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+			{
+				to_top_btn.style.display = 'block';	
+			} else {
+				to_top_btn.style.display = 'none';	
+			}
+		}
+		
+		function to_top()
+		{
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For others
+		}
+			
+	</script>
+</html>
