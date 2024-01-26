@@ -18,7 +18,7 @@ p {
 
 body {
   background-color:white;
-  color:var(--nord0);
+  color:black;
   font-family:Arial,sans-serif;
   font-size:18px;
   overflow-x:hidden;
@@ -187,17 +187,19 @@ a.db-bar-item, a.db-button {
 
 .db-header { 
   font-size:42px;
+  color:white;
+  font-weight:bold;
 }
 
 .db-title {
   font-size:38px;
   margin-top:50px;
-  color:var(--nord0);
+  color:white;
+  font-style:italic;
 }
 
 .db-body {
   font-size:20px;
-  width:70%;
   margin:40px auto;
 }
 
@@ -209,6 +211,7 @@ a.db-bar-item, a.db-button {
   margin-top:30px;
   width:60%;
   margin:40px auto;
+  font-weight:bold;
 }
 
 .db-subtitle {
@@ -226,7 +229,8 @@ a.db-bar-item, a.db-button {
 }
 
 .db-codeblock {
-  background-color:var(--nord7);
+  background-color:var(--nord3);
+  color:white;
   width:fit-content;
   height:fit-content;
   padding:20px;
@@ -239,15 +243,16 @@ a.db-bar-item, a.db-button {
   padding:6px;
   width:80%;
   height:50px;
-  background-image:linear-gradient(to right, white 0%, #81a1c1 50%, white 100%);
+  background-color:var(--nord1);
+  color:white;
   z-index:-1;
 }
 
 .db-color-block {
-  padding:6px;
-  width:150%;
+  padding:10px;
+  width:100%;
   height:fit-content;
-  background-image:linear-gradient(to left, #81a1c1, white);
+  background-color:var(--nord1);
 }
 
 .db-separator {
@@ -373,6 +378,8 @@ db-container, .db-panel {
 
 .db-center {
   margin:auto;
+  display:block;
+  width:50%;
 }
 
 .db-center-content {

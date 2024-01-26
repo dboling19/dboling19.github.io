@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="HTML, CSS, JavaScript" charset="UTF-8">
+		<title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
+	</head>
+	<body lang="en-US"><p style="line-height:100%;margin-bottom:0in;">
+		<div class="db-sidebar">
+      <img style="height:auto;width:50px;margin:5px 50px;" src="assets/images/boling_logo.png" alt="Boling IT Solutions Logo"/>
+			<a class="db-button db-nav" href="home.html">Home</a>
+			<a class="db-button db-nav" href="projects.html">Projects</a>
+      <a class="db-button db-nav" href="about.html">About Me</a>
+			<span style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
+		</div>
+		<div class="db-half db-center">
+			<svg class="db-color-block db-top" style="width:200%;">
+        <span class="db-header">About Me</span>
+      </svg>
+			<p class="db-body db-text-center">I am Daniel Boling, Goshen College 2023 Graduate with a Bachelor's in IT and Business.</p>
+      <img src="assets/images/selfie.jpg" alt="Daniel Boling Selfie" class="db-center"/>
+      <p class="db-body">Finding a passion for IT development at a young age, I started out with basics of inventory management and robotics.  Finding a specific interest in data engineering, I continued finding new avenues for data management skills and developing software for it.</p>
+      <p class="db-body">My first language was Lua, using it for basic terminal applications and learning the basics of variables, loops, functions, and general scripting practices.  Later I found the obvious similarities of Python an easy level up.  My first "professional" position was in college as a student technical assistant (STA).  My roles included general helpdesk customer support (resetting drivers, helping users and students with devices, etc.).  A year later being promoted to student technician, increasing my responsibilities to campus-wide office support and device repair.  In college I was approached by the IT Director for a web/software development opportunity, the language of choice being PHP.  I completed the training desired, and moved on to working on other projects within the college where I learned Symfony PHP, Doctrine, Twig, advanced SQL, and more under the IT Manager and Senior Developer.  After graduating my first real position outside of college was as a Private IT Contractor at Goshen City, developing the application seen under the "Projects" page.  </p>
+			<svg class="db-separator"></svg>
+			
+			
+			<p class="db-title db-color-block" id="customer_service"><i>Skills</i></p>
+			<p class="db-poptext">PHP</p>
+			<p class="db-poptext">MySQL | MSSQL | Orcle SQL</p>
+			<p class="db-poptext">JS | HTML | CSS</p>
+      <p class="db-body">I write my own CSS for my projects (Used here as well), but am familiar with others such as Bootstrap , W3, and FontAwesome.</p>
+      <p class="db-body">Other familiar languages include Python, C#, .NET, Lua.</p>
+      <p class="db-body">Experience in Customer Support, consumer and enterprise hardware/infrsatructure, and system administration.</p>
+      <p class="db-body">Quick learner, only needing direction and documentation to learn something new.</p>
+			<svg class="db-separator"></svg>
+			
+		</div>
+		<button onclick="to_top()" id="to_top_btn" class="db-top-btn"><b>Top</b></button>
+	</body>
+	
+	<script>
+		let to_top_btn = document.getElementById('to_top_btn');
+		window.onscroll = function() {scroll_function()};
+		function scroll_function()
+		{
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+			{
+				to_top_btn.style.display = 'block';	
+			} else {
+				to_top_btn.style.display = 'none';	
+			}
+		}
+		
+		function to_top()
+		{
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For others
+		}
+			
+	</script>
+</html>
