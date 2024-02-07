@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta content="HTML, CSS, JavaScript" charset="UTF-8">
+		<meta content="HTML, CSS, JavaScript, width=device-width, initial-scale=1.0" charset="UTF-8" name="viewport">
 		<title>Projects</title>
-    <link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
+		<link rel="shortcut icon" href="/assets/images/favicon-static.ico" type="image/x-icon">
+		<link rel="icon" href="/assets/images/favicon-animated.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
 	</head>
-	<body lang="en-US"><p style="line-height:100%;margin-bottom:0in;">
+	<body>
 		<div class="db-sidebar">
-      <img style="height:auto;width:50px;margin:5px 50px;" src="assets/images/boling_logo.png" alt="Boling IT Solutions Logo"/>
+			<img style="height:auto;width:50px;margin:5px 50px;" class="db-logo" src="/assets/images/favicon-animated.ico" alt="Boling IT Solutions Logo"/>
+      <a class="db-button db-menu-btn" id="menu-btn"><img style="height:20px;width:auto;" src="/assets/images/bars-solid.svg" alt="Open"/></a>
 			<a class="db-button db-nav" href="home.html">Home</a>
-			<a class="db-button db-nav" href="products.html">Projects</a>
-      <a class="db-button db-nav" href="about.html">About Me</a>
-      <a class="db-button db-nav" href="contact.html">Contact</a>
-			<span style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
+			<a class="db-button db-nav" href="projects.html">Projects</a>
+			<a class="db-button db-nav" href="about.html">About Me</a>
+			<a class="db-button db-nav" href="contact.html">Contact</a>
+			<span class="db-nav" style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
 		</div>
+    <div class="db-mobile-menu" id="mobile-menu">
+      <a class="db-button db-nav" href="home.html">Home</a>
+			<a class="db-button db-nav" href="projects.html">Projects</a>
+			<a class="db-button db-nav" href="about.html">About Me</a>
+			<a class="db-button db-nav" href="contact.html">Contact</a>
+    </div>
+    <div class="db-bar db-top"><span class="db-half db-center">Projects</span></div>
 		<div class="db-half db-center">
-			<svg class="db-color-block db-top" style="width:200%;"></svg>
-			<span class="db-header">Projects</span>
-			<p class="db-title db-color-block" id="our_why"><i>ERP System</i></p>
+			<p class="db-title db-bar" id="our_why"><i>ERP System</i></p>
       <p class="db-body db-text-center">Initially developed for a food pantry, later turning into a larger  <span style="color:#81a1c1"><b>ERP system</b></span>.  The intention of this project is to finalize and sell it to medium-sized organizations.  Currently, it is capable of basic inventory management and organization asset purchases.</p>
       <p class="db-body">This is an in-progress system with planned additions to include barcode scanning and generating reports for item retrieval lists.  Currently, the system provides an efficient alternative to spreadsheets and handwritten notes, allowing the entry, management, and retreival of organization data.</p>
-      <img class="db-center" style="width:100%;" src="assets/images/inventory_1.png" alt="Inventory System Preview 1"/>
+      <img class="db-center db-image" src="assets/images/inventory_1.png" alt="Inventory System Preview 1"/>
 			<svg class="db-separator"></svg>
 
-			<p class="db-title db-color-block" id="our_why"><i>Asset and Customer Management</i></p>
+			<p class="db-title db-bar" id="our_why"><i>Asset and Customer Management</i></p>
 			<p class="db-body db-text-center">Beginnings of a larger ERP system for and alongside <span style="color:#81a1c1"><b>Goshen City's Clerk/Treasurer Office</b></span>, managing cemetery plots, owners, and burials.</p>
       <p class="db-body">This is the beginning of a larger ERP system that manages city resources and assets.  Currently, the system provides an efficient alternative to spreadsheets and handwritten notes, allowing the entry, management, and retreival of cemetery data.</p>
-      <img class="db-center" style="width:100%;" src="assets/images/cemetery_1.png" alt="Cemetery System Preview"/>
-			<svg class="db-separator"></svg>
+      <img class="db-center db-image" src="assets/images/cemetery_1.png" alt="Cemetery System Preview"/>
+      <svg class="db-separator"></svg>
 
-
+      <br>
+      <div class="db-half db-center" style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;gap:0px;relative;height:150px;color:white;white-space:nowrap;">
+        <a class="db-body" style="flex-grow:1;flex-basis:100%;margin:0;background-color:var(--nord1);color:var(--nord13);height:100%;text-decoration-line:underline;display:flex;justify-content:center;align-items:center;" href="contact.html">Contact Me</a>
+        <p class="db-body" style="flex-grow:1;flex-basis:100%;margin:0;background-color:var(--nord3);color:var(--nord13);height:100%;display:flex;justify-content:center;align-items:center;">I'm happy to hear from you!</p>
+      </div>
+      <svg class="db-separator"></svg>
 		</div>
 		<button onclick="to_top()" id="to_top_btn" class="db-top-btn"><b>Top</b></button>
 	</body>
@@ -52,20 +65,16 @@
 			document.body.scrollTop = 0; // For Safari
 			document.documentElement.scrollTop = 0; // For others
 		}
-
-    // calculates curve of top separator
-    addEventListener('resize', (event) => {
-      // d="m 0 25 C 333 -45, 666 95, 1300 25"
-      const svg = document.getElementById('top_separator');
-      const path = document.getElementById('top_separator_path');
-      const svg_width = svg.clientWidth;
-      const svg_height = svg.clientHeight;
-      first_curve =  (Math.round(svg_width / 3)).toString() + " " + (Math.round((svg_height - 5) * -1)).toString();
-      second_curve = (Math.round((svg_width / 3) * 2)).toString() + " " + (Math.round(svg_height + (svg_height - 5))).toString();
-      section_end = svg_width.toString() + " 25";
-      d_value = "m 0 25 C " + first_curve + ", " + second_curve + ", " + section_end;
-      path.setAttribute('d', d_value);
-    });
 			
+    var menu_btn = document.querySelector("#menu-btn");
+    var menu = document.querySelector(".db-mobile-menu");
+
+    menu_btn.addEventListener("click", () => {
+      if (menu.style.display == "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    });
 	</script>
 </html>

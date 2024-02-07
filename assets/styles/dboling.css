@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @import "./nord.css";
 
 @page {
@@ -28,59 +27,6 @@ a {
   text-decoration:none;
 }
 
-label {
-  width:100%;
-}
-
-table {
-  border-collapse:collapse;
-  width:100%;
-  table-layout:fixed;
-  white-space:nowrap;
-  border-top:1px solid #ccc;
-  border-bottom:1px solid #ccc;
-}
-
-th {
-  width:auto;
-  padding: 4px;
-  border-bottom:2px solid #ccc;
-  text-align:left;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  overflow:hidden;
-}
-
-tr, td {
-  width:auto;
-  padding:4px;
-  text-align:left;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  overflow:hidden;
-}
-
-tr:hover {
-  background-color: white!important;
-}
-
-tr:nth-child(odd) {
-  background-color: var(--nord5);
-}
-
-tr:nth-child(even) {
-  background-color: #f2f6ff;
-}
-
-tr.db-disabled-row:nth-child(odd) {
-  background-color:lightgrey;
-}
-
-tr.db-disabled-row:nth-child(even) {
-  background-color:#ececec;
-}
 
 .db-container:after,.db-container:before,.db-panel:after,.db-panel:before{content:"";display:table;clear:both}
 
@@ -136,6 +82,10 @@ a.db-bar-item, a.db-button {
   z-index:1;
   top:0;
   left:0;
+}
+
+.db-mobile-menu {
+  display:none;
 }
 
 .db-nav {
@@ -194,24 +144,30 @@ a.db-bar-item, a.db-button {
 .db-title {
   font-size:38px;
   margin-top:50px;
-  color:white;
   font-style:italic;
 }
 
 .db-body {
-  font-size:20px;
-  margin:40px auto;
+  margin:40px 20px;
+}
+
+.db-image {
+  width:100%;
+  padding:20px;
 }
 
 .db-poptext {
   font-size:30px;
   text-align:center;
-  color:var(--nord10);
+  color:var(--nord13);
   margin-bottom:30px;
   margin-top:30px;
   width:60%;
-  margin:40px auto;
+  margin:30px auto;
   font-weight:bold;
+  padding:30px 20px;
+  border-radius:6px;
+  background-color:var(--nord3);
 }
 
 .db-subtitle {
@@ -230,29 +186,32 @@ a.db-bar-item, a.db-button {
 
 .db-codeblock {
   background-color:var(--nord3);
-  color:white;
+  color:var(--nord13);
   width:fit-content;
   height:fit-content;
   padding:20px;
   border-radius:5px;
 }
 
-.db-color-block.db-top{
-  transform:translate(-17%,0);
-  position:absolute;
-  padding:6px;
-  width:80%;
-  height:50px;
-  background-color:var(--nord1);
+.db-bar.db-top {
+  background-color:var(--nord0);
   color:white;
+  font-size:42px;
+  font-weight:bold;
+  padding:6px;
   z-index:-1;
 }
 
-.db-color-block {
+.db-bar.db-title {
   padding:10px;
   width:100%;
   height:fit-content;
-  background-color:var(--nord1);
+  background-color:var(--nord3);
+  color:white;
+}
+
+.db-menu-btn {
+  display:none;
 }
 
 .db-separator {
@@ -262,7 +221,6 @@ a.db-bar-item, a.db-button {
   margin-top:100px;
   height:10px;
   background-color:var(--nord6);
-  box-shadow:2px 1px 5px var(--nord3);
 }
 
 .db-padding-small {
@@ -297,7 +255,7 @@ a.db-bar-item, a.db-button {
   max-width:300px;
 }
 
-db-container, .db-panel {
+.db-container, .db-panel {
   padding:0.01em 10px;
 }
 
@@ -379,7 +337,6 @@ db-container, .db-panel {
 .db-center {
   margin:auto;
   display:block;
-  width:50%;
 }
 
 .db-center-content {
@@ -549,4 +506,67 @@ span .db-dark-mode .db-tag-label {
   width:150%;
   height:fit-content;
   background-image:linear-gradient(to left, var(--nord0), white);
+}
+
+@media (max-width: 808px) {
+
+  @page {
+    overflow-x:hidden;
+  }
+
+  body {
+    font-size:18px;
+    margin:0;
+  }
+
+  .db-bar.db-top {
+    font-size:30px;
+  }
+
+  .db-bar.db-title {
+    font-size:28px;
+  }
+
+  .db-sidebar {
+    position:relative;
+    background-color: var(--nord6);
+    width:100%;
+    height:fit-content;
+  }
+
+  .db-sidebar .db-nav {
+    display:none;
+  }
+
+  .db-mobile-menu {
+    background-color: var(--nord6);
+    width:auto;
+    height:100%;
+  }
+
+  .db-logo {
+    display:none;
+  }
+
+  .db-menu-btn {
+    display:block;
+    /* width:100%; */
+  }
+
+  .db-half, .db-quarter, .db-third, .db-twothird, .db-threequarter {
+    width:unset;
+  }
+
+  .db-body {
+    padding:10px;
+  }
+ 
+  .db-header { 
+    font-size:30px;
+    padding:10px;
+  }
+
+  .db-codeblock {
+    width:66%;
+  }
 }

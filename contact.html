@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta content="HTML, CSS, JavaScript" charset="UTF-8">
+		<meta content="HTML, CSS, JavaScript, width=device-width, initial-scale=1.0" charset="UTF-8" name="viewport">
 		<title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
+		<link rel="shortcut icon" href="/assets/images/favicon-static.ico" type="image/x-icon">
+		<link rel="icon" href="/assets/images/favicon-animated.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="assets/styles/dboling.css"/>
 	</head>
-	<body lang="en-US"><p style="line-height:100%;margin-bottom:0in;">
+	<body>
 		<div class="db-sidebar">
-      <img style="height:auto;width:50px;margin:5px 50px;" src="assets/images/boling_logo.png" alt="Boling IT Solutions Logo"/>
+			<img style="height:auto;width:50px;margin:5px 50px;" class="db-logo" src="/assets/images/favicon-animated.ico" alt="Boling IT Solutions Logo"/>
+      <a class="db-button db-menu-btn" id="menu-btn"><img style="height:20px;width:auto;" src="/assets/images/bars-solid.svg" alt="Open"/></a>
 			<a class="db-button db-nav" href="home.html">Home</a>
 			<a class="db-button db-nav" href="projects.html">Projects</a>
-      <a class="db-button db-nav" href="about.html">About Me</a>
-      <a class="db-button db-nav" href="contact.html">Contact</a>
-			<span style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
+			<a class="db-button db-nav" href="about.html">About Me</a>
+			<a class="db-button db-nav" href="contact.html">Contact</a>
+			<span class="db-nav" style="padding:6px;font-size:10px;text-align:center;bottom:0;position:fixed;"><i>Updated 1/25/2024</i></span>
 		</div>
+    <div class="db-mobile-menu" id="mobile-menu">
+      <a class="db-button db-nav" href="home.html">Home</a>
+			<a class="db-button db-nav" href="projects.html">Projects</a>
+			<a class="db-button db-nav" href="about.html">About Me</a>
+			<a class="db-button db-nav" href="contact.html">Contact</a>
+    </div>
 		<div class="db-half db-center">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6w1vkYLbx0vfaMHCNyWR_5xMCULFFnMcHx7aA1IyzF8lR6A/viewform?embedded=true" style="width:100%;height:1000px;border:none;">Loading…</iframe>
 			
@@ -39,6 +48,17 @@
 			document.body.scrollTop = 0; // For Safari
 			document.documentElement.scrollTop = 0; // For others
 		}
+
+    var menu_btn = document.querySelector("#menu-btn");
+    var menu = document.querySelector(".db-mobile-menu");
+
+    menu_btn.addEventListener("click", () => {
+      if (menu.style.display == "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    });
 			
 	</script>
 </html>
